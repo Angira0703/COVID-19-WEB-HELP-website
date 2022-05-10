@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Covid-19</title>
+        <!-- link stylesheet file -->
+        <link rel="stylesheet" href="./stylesheets/coronaTesting.css">
+    </head>
+    <body>
+        <div id="navbar">
+			<div class="container">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="timelines.html">TIMELINE</a></li>
+					<li><a href="#">Corona Testing</a></li>
+					
+				</ul>
+			</div>
+		</div>
+        <div class="regform">
+            <h1>Information Form</h1>
+        </div>
+        <div class="main">
+            <form  id="testForm">
+                <div id="name">
+                    <h2 class="name">
+                        Name
+                    </h2>
+                    <input id="firstname" type="text" required name="first_name"><br>
+                    <label id="firstlabel">First Name</label>
+                
+                    <input id="lastname" type="text" required name="last_name"><br>
+                    <label id="lastlabel">Last Name</label>
+                
+                
+                </div>
+                <h2 class="name">Occupation</h2>
+                <input id="profession" placeholder="Doctor/Teacher" type="text" required><br>
+                
+
+                <h2 class="name">Email Id</h2>
+                <input id="email" placeholder="abc@xyz.com" type="text" required><br>
+
+                <h2 class="name">Date of Birth</h2>
+                <input id="dateofbirth" placeholder="abc@xyz.com" type="date" required><br>
+
+                <h2 class="name">Mobile-no</h2>
+                <input id="mobile" placeholder="000 000 0000" type="tel" required><br>
+
+                <h2 class="name">City/State</h2>
+                <select name="state" id="state">
+                    <option disabled required selected>Select City</option>
+
+                    <option>Kolkata</option>
+                    <option>Bombay</option>
+                    <option>New Delhi</option>
+                    <option>Chennai</option>
+                    <option>Pune</option>
+                    <option>Bangalore</option>
+                    <option>Hyderabad</option>
+                    <option>Ahmedabad</option>
+                    <option>Jaipur</option>
+                    
+                </select>
+
+                <h2 id="travel">Have you travelled by air or by train in the last one month?</h2>
+                <div class="travel">
+                    <div class="toggle-radio">
+                        <input type="radio" name="option" id="yes" checked>
+                        <input type="radio" name="option" id="no">
+                        <div class="switch">
+                          <label for="yes">Yes</label>
+                          <label for="no">No</label>
+                          <span></span>
+                        </div>
+                      </div>
+                </div>
+
+                <h2 id="symptoms">Do you have any of the following symptoms?</h2>
+
+                <div class="arrange">
+                    <input type="checkbox" name="symptoms" value="fever" id="cb1">
+                    <label for="cb1">Fever</label>
+
+                    <input type="checkbox" name="symptoms" value="drycough" id="cb2">
+                    <label for="cb2">Dry Cough</label>
+
+                    <input type="checkbox" name="symptoms" value="cold" id="cb3">
+                    <label for="cb3">Cold</label>
+
+                    <input type="checkbox" name="symptoms" value="breathingissues" id="cb4">
+                    <label for="cb4">Breathing Issues</label>
+
+                    <input type="checkbox" name="symptoms" value="chestpain" id="cb5">
+                    <label for="cb5">Chest Pain
+
+                    <input type="checkbox" name="symptoms" value="nonr" id="cb6">
+                    <label for="cb6">None</label>
+                </div>
+                    <input  id="submit" type="submit">
+
+                    <div id="centers">
+                        <h2>Corona Testing Centres around you... <span id="result"></span></h2>
+                        
+                    </div>
+            </form>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase.js"></script>
+        <script src="script/testingscript.js"></script>
+        
+    </body>
+    </html>
